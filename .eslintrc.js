@@ -7,7 +7,11 @@ module.exports = {
     'plugin:vue/vue3-essential',
     'eslint:recommended'
   ],
+  "parser": "@typescript-eslint/parser",
+  "parser": "vue-eslint-parser",
   parserOptions: {
+    "parser": "@typescript-eslint/parser",
+    "sourceType": "module",
     parser: '@babel/eslint-parser'
   },
   rules: {
@@ -16,7 +20,18 @@ module.exports = {
   },
   ignores: {
     "vue/multi-word-component-names": ["error", {
-      "ignores": []
+      "ignores": [
+        {
+          "vue/multi-word-component-names": ["error", {
+            "ignores": []
+          }]
+        },
+        {
+          "vue/multi-word-component-names": ["error", {
+            "ignores": []
+          }]
+        }
+      ]
     }]
   }
 }
