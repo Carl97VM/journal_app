@@ -9,7 +9,8 @@
         </div>
     </div>
 </template>
-
+<!-- filename: Navbar.vue -->
+<!-- filename: EntryList.vue -->
 <script>
 import { defineAsyncComponent } from 'vue'
 
