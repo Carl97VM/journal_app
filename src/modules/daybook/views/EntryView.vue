@@ -24,7 +24,9 @@ import { defineAsyncComponent } from 'vue';
 
         </textarea>
     </div>
-    <Fab />
+    <Fab 
+        icon='fa-save'
+    />
     <img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Forte_de_Copacabana_panorama.jpg" alt="entry-picture"
     class="img-thumnail">
 </template>
