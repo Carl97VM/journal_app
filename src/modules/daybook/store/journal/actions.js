@@ -1,5 +1,5 @@
 
-// export const myAction = async () => {
+// export const myAction = async ({ commit }) => {
 
 // }
 
@@ -7,10 +7,11 @@ export const loadEntries = async (/*{ commit }*/) => {
 
 }
 
-export const updataEntries = async (/*{ commit }*/) => {
+export const updateEntry = async (/*{ commit }*/) => {
 
 }
 
-export const createEntries = async (/*{ commit }*/) => {
+
+export const createEntry = async (/*{ commit }*/) => {
 
 }

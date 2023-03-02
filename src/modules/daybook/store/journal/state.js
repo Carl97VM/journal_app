@@ -3,22 +3,22 @@ export default () => ({
     isLoading: true,
     entries: [
         {
-            id: new Date().getTime(),
-            date: new Date().toDateString(),
-            text: 'lorem imput * 3',
-            picture: null
+            id: '1', // 12371298317892
+            date: new Date().toDateString(), // sat 23, julio
+            text: 'Historia 1',
+            picture: null, // https://
         },
         {
-            id: new Date().getTime() + 1000,
-            date: new Date().toDateString(),
-            text: 'lorem imput * 4',
-            picture: null
+            id: '2', // 12371298317892
+            date: new Date().toDateString(), // sat 23, julio
+            text: 'Historia 2',
+            picture: null, // https://
         },
         {
-            id: new Date().getTime() + 2000,
-            date: new Date().toDateString(),
-            text: 'lorem imput * 4',
-            picture: null
-        }
+            id: '3', // 12371298317892
+            date: new Date().toDateString(), // sat 23, julio
+            text: 'Historia 3',
+            picture: null, // https://
+        },
     ]
 })

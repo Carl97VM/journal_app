@@ -1,4 +1,5 @@
 
+
 export default {
 
     name: 'daybook',
@@ -7,12 +8,18 @@ export default {
         {
             path: '',
             name: 'no-entry',
-            component: () => import(/* webpackChunkName: "Daybook-no-entry" */ '@/modules/daybook/views/NoEntrySelected.vue')
+            component: () => import(/* webpackChunkName: "daybook-no-entry" */ '@/modules/daybook/views/NoEntrySelected.vue'),
         },
         {
             path: ':id',
             name: 'entry',
-            component: () => import(/* webpackChunkName: "Daybook-no-entry" */ '@/modules/daybook/views/EntryView.vue')
+            component: () => import(/* webpackChunkName: "daybook-no-entry" */ '@/modules/daybook/views/EntryView.vue'),
+            props: ( route ) => {
+                return {
+                    id: route.params.id
+                }
+            }
         }
     ]
+
 }
