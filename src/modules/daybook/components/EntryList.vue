@@ -24,7 +24,13 @@ import {defineAsyncComponent} from 'vue'
 export default {
     components: {
         Entry: defineAsyncComponent(() => import('./Entry.vue'))
-    }
+    },
+    data() {
+
+    },
+    computed: {
+
+    },
 }
 </script>
 <style lang="scss"  scoped>
