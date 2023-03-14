@@ -40,6 +40,7 @@
 
     <Fab 
         icon="fa-save"
+        @on:click="saveEntry"
     />
 
 </template>
@@ -60,7 +61,6 @@ export default {
     components: {
         Fab: defineAsyncComponent(() => import('../components/Fab.vue'))
     },
-
     data() {
         return {
             entry: null
@@ -89,6 +89,9 @@ export default {
             if ( !entry ) return this.$router.push({ name: 'no-entry' })
 
             this.entry = entry
+        },
+        async saveEntry() {
+            console.log('Guardar Entradas');
         }
     },
 
