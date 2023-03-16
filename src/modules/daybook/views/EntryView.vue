@@ -50,6 +50,7 @@ import { defineAsyncComponent } from 'vue'
 import { mapGetters, mapActions } from 'vuex' // computed!!!
 
 import getDayMonthYear from '../helpers/getDayMonthYear'
+import { createEntry } from '../store/journal/actions'
 
 export default {
     props: {
@@ -84,7 +85,7 @@ export default {
     },
 
     methods: {
-        ...mapActions('journal', ['updateEntry']),
+        ...mapActions('journal', ['updateEntry', 'createEntry']),
         loadEntry() {
             let entry;
             if(this.id === 'new'){
@@ -104,7 +105,9 @@ export default {
                 await this.updateEntry( this.entry )
             } else {
                 //crear una nueva entrada
-                console.log('Crear una nueva entrada');
+                // console.log('Crear una nueva entrada');
+                const id = await this.createEntry( this.entry )
+                this.$router.push({ name: 'entry', params: { id:id } })
             }
             // console.log('Guardar Entradas');
         }
